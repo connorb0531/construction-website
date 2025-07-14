@@ -2,7 +2,7 @@
 
 ## Quick setup instructions (new computer)
 
-### 1️. Clone repository
+### 1. Clone repository
 
 ```bash
 git clone <repo-url>
