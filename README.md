@@ -1,6 +1,6 @@
 # Construction Website
 
-## Quick setup instructions (new computer)
+## Quick setup instructions
 
 ### 1. Clone repository
 
@@ -34,26 +34,27 @@ MONGO_URI=<your MongoDB Atlas connection string>
 PORT=5000
 ```
 
-### 4. Run servers locally (for development)
+### 4. Tailwind CSS setup
+```bash
+npm install -D tailwindcss@3.4.3 postcss autoprefixer
+```
+
+### 5. Run servers locally (for development)
 
 Start backend API:
-bash
-Copy code
 
 ```bash
 cd server
 npm run dev
 ```
 Start frontend React app (in a separate terminal):
-bash
-Copy code
 
 ```bash
 cd client
 npm start
 ```
 
-### 5. Access the app
+### 6. Access the app
 * Frontend: http://localhost:3000
 * API: http://localhost:5000/api/projects
 
