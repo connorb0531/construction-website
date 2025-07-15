@@ -32,7 +32,7 @@ export const createProject = async (req, res) => {
   const newProject = new Project({
     title,
     description,
-    imageUrl
+    imageUrl: imageUrl && imageUrl.trim() !== '' ? imageUrl : '/img/default_project.png'
   });
 
   try {
