@@ -8,7 +8,7 @@ function Navbar() {
       <div className="flex justify-between items-center h-16 px-4 sm:px-8 lg:px-14">
         {/* Logo / Site Name */}
         <Link to="/" className="flex items-center gap-2 font-bold">
-          <img src="/img/logo_placeholder.png" className="w-10 h-10 object-contain" alt="Your Image" />
+          <img src="/img/logo_placeholder.png" className="w-10 h-10 object-contain" alt="Logo" />
           <p className="px-2">Construction Company</p>
         </Link>
 
@@ -17,8 +17,8 @@ function Navbar() {
         <div className="space-x-8">
           <Link to="/" className="hover:text-gray-300">Home</Link>
           <Link to="/projects" className="hover:text-gray-300">Projects</Link>
-          <Link to="/about" className="hover:text-gray-300">About Us</Link>
-          <Link to="/contact" className="hover:text-gray-300">Contact Us</Link>
+          <Link to="/about" className="hover:text-gray-300">About</Link>
+          <Link to="/contact" className="hover:text-gray-300">Contact</Link>
         </div>
       </div>
     </nav>

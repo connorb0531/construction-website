@@ -1,6 +1,14 @@
 // client/src/pages/ContactPage.js
+
+import React from "react";
+import ContactForm from "../components/ContactForm";
+
 function ContactPage() {
-  return <h1>Contact us</h1>;
+  return (
+    <div className="p-4">
+      <ContactForm />
+    </div>
+  );
 }
 
 export default ContactPage;
