@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function Navbar() {
   return (
     <nav className="sticky top-0 z-50 text-xl font-inter bg-gradient-to-r from-cyan-600 to-blue-500 bg-white shadow-md text-white">
-      <div className="flex justify-between items-center h-16 px-4 sm:px-8 lg:px-14">
+      <div className="flex flex-wrap justify-between items-center h-20 px-4 sm:px-8 lg:px-14">
         {/* Logo / Site Name */}
         <Link to="/" className="flex items-center gap-2 font-bold">
           <img src="/img/logo_placeholder.png" className="w-10 h-10 object-contain" alt="Logo" />

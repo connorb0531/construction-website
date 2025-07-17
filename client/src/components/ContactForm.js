@@ -29,7 +29,7 @@ function ContactForm() {
     }
   };
 
-  // ✅ Properly structured useEffect to reset `submitted` after 5 sec
+// reset `submitted` after 5 sec
   useEffect(() => {
     let timer;
     if (submitted) {

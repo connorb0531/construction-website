@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ProjectCard from "../components/ProjectCard";
+import Loading from "../components/Loading.js";
 
 function ProjectsPage() {
   const [projects, setProjects] = useState([]);
@@ -19,15 +20,17 @@ function ProjectsPage() {
   }, []);
 
   return (
-    <div>
+    <div className="p-4">
       {loading ? (
-        <p>Loading projects...</p>   // Show while fetching
+        <Loading />
       ) : projects.length === 0 ? (
-        <p>No projects found.</p>    // Show only if loading complete and empty
+        <p className="text-3xl font-bold text-center mt-8">No projects found.</p>
       ) : (
-        projects.map(project => (
-          <ProjectCard key={project._id} project={project} />
-        ))
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {projects.map(project => (
+            <ProjectCard key={project._id} project={project} />
+          ))}
+        </div>
       )}
     </div>
   );
