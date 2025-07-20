@@ -3,7 +3,7 @@ import axios from "axios";
 import ProjectCard from "../components/ProjectCard";
 import Loading from "../components/Loading.js";
 
-const API_BASE_URL = process.env.API_BASE_URL
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL
 
 function ProjectsPage() {
   const [projects, setProjects] = useState([]);
