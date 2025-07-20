@@ -3,12 +3,14 @@ import axios from "axios";
 import ProjectCard from "../components/ProjectCard";
 import Loading from "../components/Loading.js";
 
+const API_BASE_URL = process.env.API_BASE_URL
+
 function ProjectsPage() {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
-    axios.get("/api/projects")  
+    axios.get(`${API_BASE_URL}/api/contact`)  
       .then(response => {
         setProjects(response.data);
         setLoading(false);

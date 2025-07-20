@@ -14,8 +14,9 @@ const PORT = process.env.PORT;
 
 // Middleware
 app.use(cors({
-  origin: "http://localhost:3000"
+  origin: ["http://localhost:3000", "https://your-frontend-url.onrender.com"]
 }));
+
 app.use(express.json()); // Parse JSON request bodies
 app.use("/api/projects", projectRoutes);
 app.use("/api/contact", contactRoutes)

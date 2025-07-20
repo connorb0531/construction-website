@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+const API_BASE_URL = process.env.API_BASE_URL
+
 function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
@@ -21,7 +23,7 @@ function ContactForm() {
     setError("");
 
     try {
-      await axios.post("/api/contact", formData);
+      await axios.post(`${API_BASE_URL}/api/contact`, formData);
       setSubmitted(true);
     } catch (err) {
       console.error("Error submitting contact form:", err);
