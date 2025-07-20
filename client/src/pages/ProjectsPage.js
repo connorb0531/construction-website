@@ -10,7 +10,7 @@ function ProjectsPage() {
   const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
-    axios.get(`${API_BASE_URL}/api/contact`)  
+    axios.get(`${API_BASE_URL}/api/projects`)  
       .then(response => {
         setProjects(response.data);
         setLoading(false);
