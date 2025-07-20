@@ -5,7 +5,7 @@ import ContactForm from "../components/ContactForm";
 
 function ContactPage() {
   return (
-    <div className="p-4">
+    <div className="py-16">
       <ContactForm />
     </div>
   );

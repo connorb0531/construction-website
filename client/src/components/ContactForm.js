@@ -39,8 +39,8 @@ function ContactForm() {
   }, [submitted]);
 
   return (
-    <div className="max-w-lg mx-auto p-4 bg-white shadow-md rounded">
-      <h2 className="text-2xl font-bold mb-4">Contact</h2>
+    <div className="max-w-lg mx-auto p-4  rounded text-gray-800">
+      <h2 className="text-3xl font-bold mb-4">Contact</h2>
 
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
