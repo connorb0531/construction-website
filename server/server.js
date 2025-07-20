@@ -14,8 +14,12 @@ const PORT = process.env.PORT;
 
 // Middleware
 app.use(cors({
-  origin: ["http://localhost:3000", "https://your-frontend-url.onrender.com"]
+  origin: [
+    "http://localhost:3000",
+    "https://tbuckley-construction-client.onrender.com"
+  ]
 }));
+
 
 app.use(express.json()); // Parse JSON request bodies
 app.use("/api/projects", projectRoutes);
