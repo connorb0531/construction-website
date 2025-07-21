@@ -25,21 +25,33 @@ cd ../client
 npm install
 ```
 
-### 3. Environment variables
+### 3. Install driver for MongoDB
+
+```bash
+npm install mongodb
+```
+
+### 4. Environment variables
 
 Create a `.env` file inside `server` directory:
 
 ```server/.env:
-MONGO_URI=<your MongoDB Atlas connection string>
+MONGO_URI=
 PORT=5000
 ```
 
-### 4. Tailwind CSS setup
+Create a `.env` file inside `client` directory:
+
+```servclienter/.env:
+REACT_APP_API_BASE_URL= *blank string for local dev
+```
+
+### 5. Tailwind CSS setup
 ```bash
 npm install -D tailwindcss@3.4.3 postcss autoprefixer
 ```
 
-### 5. Run servers locally (for development)
+### 6. Run servers locally (for development)
 
 Start backend API:
 
@@ -54,7 +66,7 @@ cd client
 npm start
 ```
 
-### 6. Access the app
+### 7. Access the app
 * Frontend: http://localhost:3000
 * API: http://localhost:5000/api/projects
 
