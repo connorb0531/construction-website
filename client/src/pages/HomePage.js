@@ -11,27 +11,26 @@ function HomePage() {
         <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mb-6">
           Offering affordable, high-quality services.
         </p>
-        <div className="space-x-4 py-5">
-          <Link
-            to="/about"
-            className="border border-gray-800 text-gray-800 hover:bg-gray-100 px-5 py-3 rounded text-sm"
-          >
-            Learn More
-          </Link>
-          <Link
-            to="/projects"
-            className="bg-gray-800 hover:bg-gray-900 text-white px-5 py-3 rounded text-sm"
-          >
-            Projects
-          </Link>
-
-          <Link
-            to="/contact"
-            className="border border-gray-800 text-gray-800 hover:bg-gray-100 px-5 py-3 rounded text-sm"
-          >
-            Contact Me
-          </Link>         
-        </div>
+          <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0 py-5">
+            <Link
+              to="/about"
+              className="border border-gray-800 text-gray-800 hover:bg-gray-100 px-5 py-3 rounded text-sm"
+            >
+              Learn More
+            </Link>
+            <Link
+              to="/projects"
+              className="bg-gray-800 hover:bg-gray-900 text-white px-5 py-3 rounded text-sm"
+            >
+              Projects
+            </Link>
+            <Link
+              to="/contact"
+              className="border border-gray-800 text-gray-800 hover:bg-gray-100 px-5 py-3 rounded text-sm"
+            >
+              Contact Me
+            </Link>         
+          </div>
       </section>
     </div>
   );
