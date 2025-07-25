@@ -2,10 +2,14 @@
 import React from "react";
 
 function ProjectCard({ project }) {
+  const mainImage = project.images && project.images.length > 0
+    ? project.images[0]
+    : '/img/default_project.png';
+
   return (
     <div className="w-full max-w-sm aspect-[4/3] overflow-hidden rounded shadow-sm relative mb-4 transform transition-transform duration-300 hover:scale-105">
       <img
-        src={project.imageUrl || '/img/default_project.png'}
+        src={mainImage}
         alt=""
         className="w-full h-full object-cover"
       />

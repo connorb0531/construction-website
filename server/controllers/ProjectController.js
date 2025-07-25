@@ -27,12 +27,14 @@ export const getProjectById = async (req, res) => {
 
 // POST /api/projects - create new project
 export const createProject = async (req, res) => {
-  const { title, description, imageUrl } = req.body;
+  const { title, description, images } = req.body;
 
   const newProject = new Project({
     title,
     description,
-    imageUrl: imageUrl && imageUrl.trim() !== '' ? imageUrl : '/img/default_project.png'
+    images: Array.isArray(images) && images.length > 0
+      ? images
+      : ['/img/default_project.png']
   });
 
   try {
@@ -45,12 +47,18 @@ export const createProject = async (req, res) => {
 
 // PUT /api/projects/:id - update project
 export const updateProject = async (req, res) => {
-  const { title, description, imageUrl } = req.body;
+  const { title, description, images } = req.body;
 
   try {
     const updatedProject = await Project.findByIdAndUpdate(
       req.params.id,
-      { title, description, imageUrl },
+      {
+        title,
+        description,
+        images: Array.isArray(images) && images.length > 0
+          ? images
+          : ['/img/default_project.png']
+      },
       { new: true }
     );
 
