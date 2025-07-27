@@ -16,13 +16,13 @@ function AboutPage() {
       {/* About content */}
       <section className="max-w-3xl mx-auto p-8 mb-12">
         <p className="mb-8">
-          Hi, I'm Tyler Buckley — a civil engineering student with hands-on experience in design, construction, and project management. 
+          Hi, I'm Tyler Buckley, a civil engineering student at the University of Boulder with hands-on experience in construction management.
         </p>
         <p className="mb-8">
-          This isn't a traditional construction company. It's a platform for me to gain real-world experience, build my portfolio, and apply what I've learned in school — while providing affordable, high-quality services to individuals and small businesses.
+          This isn't a traditional construction company. It's a platform for me to gain real-world experience, build my portfolio, and apply what I've learned in school and internships, while providing affordable, high-quality services to individuals and small businesses.
         </p>
         <p className="mb-8">
-          Because this venture is focused on learning and growth, my services are priced fairly and delivered with care, precision, and a commitment to doing a great job. If you're looking for **student-driven, budget-friendly help with your project**, let’s talk.
+          Because this venture is focused on learning and growth, my services are priced fairly and delivered with care, precision, and a commitment to doing a great job. If you're looking for student-driven, budget-friendly help with your project, let’s talk.
         </p>
         <p>
           Thank you for supporting a student who's passionate about construction and ready to help build something great!
