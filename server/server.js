@@ -16,7 +16,7 @@ const PORT = process.env.PORT;
 app.use(cors({
   origin: [
     "http://localhost:3000",
-    "https://construction-website-client.onrender.com"
+    "https://tbuckley-construction-website-client.onrender.com"
   ]
 }));
 
