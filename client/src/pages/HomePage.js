@@ -6,10 +6,10 @@ function HomePage() {
     <div className="font-sans bg-white text-gray-800  flex flex-col">
       <section className="flex flex-col justify-center items-center text-center px-4 min-h-[65vh]">
         <h1 className="text-5xl sm:text-6xl font-bold mb-4">
-          Affordable, Reliable, Student-Driven
+          Affordable, Reliable, Student-Driven 
         </h1>
         <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mb-6">
-          Offering affordable, high-quality services.
+          Offering local constructions services based in Boulder, CO.
         </p>
           <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0 py-5">
             <Link
