@@ -16,10 +16,11 @@ const PORT = process.env.PORT;
 app.use(cors({
   origin: [
     "http://localhost:3000",
-    "https://tbuckley-construction-client.onrender.com"
+    "https://tbuckley-construction-client.onrender.com",
+    "https://tbuckdev.com",
+    "https://www.tbuckdev.com"
   ]
 }));
-
 
 app.use(express.json()); // Parse JSON request bodies
 app.use("/api/projects", projectRoutes);

@@ -13,7 +13,7 @@ function Footer() {
 
         {/* Developer credit */}
         <div>
-          Developer:{' '}
+          Web Developer:{' '}
           <a
             href="https://github.com/connorb0531"
             target="_blank"
