@@ -5,47 +5,50 @@
 ### 1. Clone repository
 
 ```bash
-git clone <repo-url>
-cd project-root
+git clone https://github.com/connorb0531/construction-website.git
 ```
 
-### Install dependencies
+### 2. Install dependencies
 
 Install backend dependencies:
 
 ```bash
-cd ../server
-npm install
+cd ./server
+npm install express mongoose cors dotenv nodemailer
+npm install -D tailwindcss@3.4.3 postcss autoprefixer
 ```
 
 Install frontend dependencies:
 
 ```bash
-cd ../client
-npm install
+cd ./client
+npm install axios react-router-dom
 ```
 
-### 3. Environment variables
+### 3. Setup environment variables
+
+Create a `.env` file inside `client` directory:
+
+```servclienter/.env:
+REACT_APP_API_BASE_URL= *empty string for local dev*
+```
 
 Create a `.env` file inside `server` directory:
 
 ```server/.env:
-MONGO_URI=<your MongoDB Atlas connection string>
-PORT=5000
+MONGO_URI=
+PORT=
+EMAIL_USER=
+EMAIL_PASS=
 ```
 
-### 4. Tailwind CSS setup
-```bash
-npm install -D tailwindcss@3.4.3 postcss autoprefixer
-```
-
-### 5. Run servers locally (for development)
+### 4. Run servers locally (for development)
 
 Start backend API:
 
 ```bash
 cd server
-npm run dev
+npm start dev
 ```
 Start frontend React app (in a separate terminal):
 
@@ -54,9 +57,9 @@ cd client
 npm start
 ```
 
-### 6. Access the app
-* Frontend: http://localhost:3000
-* API: http://localhost:5000/api/projects
+### 5. Access the app
+* Frontend: http://localhost:{FRONTEND_PORT}
+* API: http://localhost:{BACKEND_PORT}
 
 
 ## Credits

@@ -1,31 +1,38 @@
-// client/src/pages/ProjectsPage.js
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ProjectCard from "../components/ProjectCard";
+import Loading from "../components/Loading.js";
 
-const PORT = process.env.PORT;
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
 function ProjectsPage() {
   const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
-    axios.get(`http://localhost:${5000}/api/projects`)
+    axios.get(`${API_BASE_URL}/api/projects`)  
       .then(response => {
         setProjects(response.data);
+        setLoading(false);
       })
       .catch(error => {
         console.error("Error fetching projects:", error);
+        setLoading(false);
       });
   }, []);
 
   return (
-    <div>
-      {projects.length === 0 ? (
-        <p>No projects found.</p>
+    <div className="p-4">
+      {loading ? (
+        <Loading />
+      ) : projects.length === 0 ? (
+        <p className="text-3xl font-bold text-center mt-8">No projects found.</p>
       ) : (
-        projects.map(project => (
-          <ProjectCard key={project._id} project={project} />
-        ))
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {projects.map(project => (
+            <ProjectCard key={project._id} project={project} />
+          ))}
+        </div>
       )}
     </div>
   );
