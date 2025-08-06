@@ -18,7 +18,7 @@ function AboutPage() {
         <img 
           src="/img/portrait.png" 
           alt="Portrait"
-          className="float-right mb-4 w-24 sm:w-32 md:w-40 lg:w-48 rounded-xl shadow-md ml-4"
+          className="float-right mb-4 w-24 sm:w-32 md:w-40 lg:w-48 rounded-xl shadow-md ml-10"
         />
 
         <p className="mb-6">
