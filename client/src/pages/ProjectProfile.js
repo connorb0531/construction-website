@@ -52,16 +52,24 @@ function ProjectProfile() {
       </div>
 
       {/* Second Row: Second image + Description */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+      <div className="md:after:content-[''] md:after:block md:after:clear-both">
         {secondImage && (
           <img
             src={secondImage}
             alt="Second"
-            className="rounded-lg w-full object-cover max-h-[300px]"
+            className="rounded-lg w-full object-cover max-h-[300px]
+                 md:w-1/2 md:float-left md:mr-6 md:mb-2" 
           />
         )}
-        <p className="text-lg text-gray-700">{project.description || "No description available."}</p>
+
+        <p className="text-lg text-gray-700">
+          {project.description || "No description available."}
+        </p>
       </div>
+
+      {/* Clear the float before the rest of the page content */}
+      <div className="clear-both" />
+
 
       {/* Remaining Images */}
       {remainingImages.length > 0 && (
