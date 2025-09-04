@@ -1,65 +1,40 @@
-# Construction Website
+# T. Buckley Developments - Construction Website
 
-## Quick setup instructions
+Visit the live site: [tbuckdev.com](https://tbuckdev.com)
 
-### 1. Clone repository
+This project is a full-stack web application developed for my brother’s construction business. The content of the site (About, Contact, Projects) is specific to the business, while the development, structure, and deployment reflect my technical and creative work.
 
-```bash
-git clone https://github.com/connorb0531/construction-website.git
-```
+<div align="center">
+  <img src="preview.png" alt="Homepage Screenshot" width="600"/>
+</div>
 
-### 2. Install dependencies
 
-Install backend dependencies:
 
-```bash
-cd ./server
-npm install express mongoose cors dotenv nodemailer
-npm install -D tailwindcss@3.4.3 postcss autoprefixer
-```
+## Stack
 
-Install frontend dependencies:
+- React (with Tailwind CSS)
+- Node.js / Express
+- MongoDB (via Mongoose)
+- Nodemailer (contact form emails)
+- Deployed with Render
+- Domain configured via Namecheap
 
-```bash
-cd ./client
-npm install axios react-router-dom
-```
+## Features
 
-### 3. Setup environment variables
+- Fully responsive and mobile-friendly design
+- Multi-page layout with routing: Home, Projects, About, Contact
+- Contact form with backend email handling via Nodemailer
+- Projects stored and retrieved via MongoDB
+- Backend API built with Express and served under `/api`
+- Deployment-ready with environment-based configuration
+- Custom domain and SSL certificate setup
+- Clean and accessible design using Tailwind CSS utility classes
 
-Create a `.env` file inside `client` directory:
-
-```servclienter/.env:
-REACT_APP_API_BASE_URL= *empty string for local dev*
-```
-
-Create a `.env` file inside `server` directory:
-
-```server/.env:
-MONGO_URI=
-PORT=
-EMAIL_USER=
-EMAIL_PASS=
-```
-
-### 4. Run servers locally (for development)
-
-Start backend API:
-
-```bash
-cd server
-npm start dev
-```
-Start frontend React app (in a separate terminal):
-
-```bash
-cd client
-npm start
-```
-
-### 5. Access the app
-* Frontend: http://localhost:{FRONTEND_PORT}
-* API: http://localhost:{BACKEND_PORT}
+## Deployment
+- Frontend and backend are deployed as separate services on Render
+- Custom domain tbuckdev.com is configured via Namecheap
+- Render automatically handles SSL certificates (HTTPS)
+- Environment variables are configured securely via Render’s dashboard
 
 
 ## Credits
