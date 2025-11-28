@@ -1,25 +1,31 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
+const API_BASE_URL = process.env.REACT_APP_API_URL;
+
+if (!API_BASE_URL) {
+  console.error('REACT_APP_API_URL environment variable is not set');
+}
+
 function AdminPage() {
   const [projects, setProjects] = useState([]);
   const [newProject, setNewProject] = useState({ title: '', description: '', imageUrl: '' });
 
   // Load all projects
   useEffect(() => {
-    axios.get('/api/projects')
+    axios.get(`${API_BASE_URL}/api/projects`)
       .then(response => setProjects(response.data))
       .catch(error => console.error('Error fetching projects:', error));
   }, []);
 
   const handleDelete = (id) => {
-    axios.delete(`/api/projects/${id}`)
+    axios.delete(`${API_BASE_URL}/api/projects/${id}`)
       .then(() => setProjects(projects.filter(p => p._id !== id)))
       .catch(error => console.error('Error deleting project:', error));
   };
 
   const handleCreate = () => {
-    axios.post('/api/projects', newProject)
+    axios.post(`${API_BASE_URL}/api/projects`, newProject)
       .then(response => setProjects([...projects, response.data]))
       .catch(error => console.error('Error creating project:', error));
   };

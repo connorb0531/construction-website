@@ -4,7 +4,11 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import Loading from "../components/Loading";
 
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+const API_BASE_URL = process.env.REACT_APP_API_URL;
+
+if (!API_BASE_URL) {
+  console.error('REACT_APP_API_URL environment variable is not set');
+}
 
 function ProjectProfile() {
   const { id } = useParams();

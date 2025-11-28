@@ -4,7 +4,11 @@ import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import LoadingIndicator from "./Loading";
 
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+const API_BASE_URL = process.env.REACT_APP_API_URL;
+
+if (!API_BASE_URL) {
+  console.error('REACT_APP_API_URL environment variable is not set');
+}
 
 function ContactForm() {
   const [formData, setFormData] = useState({
