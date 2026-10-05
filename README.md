@@ -1,6 +1,6 @@
 # T. Buckley Developments - Construction Website
 
-Visit the live site: [tbuckdev.com](https://tbuckdev.com)
+Visit the live site: [tbuckdevelop.com](https://www.tbuckdevelop.com)
 
 This project is a full-stack web application developed for my brother’s construction business. The content of the site (About, Contact, Projects) is specific to the business, while the development, structure, and deployment reflect my technical and creative work.
 
@@ -32,7 +32,7 @@ This project is a full-stack web application developed for my brother’s constr
 
 ## Deployment
 - Frontend and backend are deployed as separate services on Render
-- Custom domain tbuckdev.com is configured via Namecheap
+- Custom domain tbuckdevelop.com is configured via Namecheap
 - Render automatically handles SSL certificates (HTTPS)
 - Environment variables are configured securely via Render’s dashboard
 

@@ -18,7 +18,9 @@ app.use(cors({
     "http://localhost:3000",
     "https://tbuckley-construction-client.onrender.com",
     "https://tbuckdev.com",
-    "https://www.tbuckdev.com"
+    "https://www.tbuckdev.com",
+    "https://tbuckdevelop.com",
+    "https://www.tbuckdevelop.com"
   ]
 }));
 
