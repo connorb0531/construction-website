@@ -2,6 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --brand-color: #166534;
+}
+
+.site-navbar {
+  background-color: var(--brand-color);
+}
+
+.brand-button {
+  background-color: var(--brand-color);
+  color: white;
+  transition: filter 150ms ease;
+}
+
+.brand-button:hover {
+  filter: brightness(0.85);
+}
+
+.brand-spinner {
+  border-color: var(--brand-color);
+  border-top-color: transparent;
+}
 
 body {
   margin: 0;

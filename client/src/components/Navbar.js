@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
-    <nav className="sticky top-0 z-50 bg-gradient-to-r from-cyan-600 to-blue-500 py-3">
+    <nav className="site-navbar sticky top-0 z-50 py-3">
       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center px-4 sm:px-8 lg:px-16">
 
         {/* Logo + Site Name */}

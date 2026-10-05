@@ -16,8 +16,8 @@ function AboutPage() {
       {/* About content */}
       <section className="max-w-3xl mx-auto pt-16">
         <img 
-          src="/img/portrait.png" 
-          alt="Portrait"
+          src="/img/about_me_headshot.jpg" 
+          alt="Tyler Buckley"
           className="float-right mb-4 w-24 sm:w-32 md:w-40 lg:w-48 rounded-xl shadow-md ml-10"
         />
 
