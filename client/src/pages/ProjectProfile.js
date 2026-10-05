@@ -14,6 +14,7 @@ function ProjectProfile() {
   const { id } = useParams();
   const [project, setProject] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
     axios
@@ -27,6 +28,23 @@ function ProjectProfile() {
         setLoading(false);
       });
   }, [id]);
+
+  useEffect(() => {
+    if (!selectedImage) return undefined;
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") setSelectedImage(null);
+    };
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [selectedImage]);
 
   if (loading) return <Loading />;
 
@@ -50,8 +68,17 @@ function ProjectProfile() {
         </div>
         <img
           src={mainImage}
-          alt="Main"
-          className="rounded-lg w-full object-cover max-h-[400px]"
+          alt={`${project.title} main view`}
+          className="rounded-lg w-full object-cover max-h-[400px] cursor-zoom-in"
+          role="button"
+          tabIndex={0}
+          onClick={() => setSelectedImage(mainImage)}
+          onKeyDown={(event) => {
+            if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault();
+              setSelectedImage(mainImage);
+            }
+          }}
         />
       </div>
 
@@ -60,9 +87,18 @@ function ProjectProfile() {
         {secondImage && (
           <img
             src={secondImage}
-            alt="Second"
+            alt={`${project.title} additional view`}
             className="rounded-lg w-full object-cover max-h-[300px]
-                 md:w-1/2 md:float-left md:mr-6 md:mb-2" 
+                 md:w-1/2 md:float-left md:mr-6 md:mb-2 cursor-zoom-in"
+            role="button"
+            tabIndex={0}
+            onClick={() => setSelectedImage(secondImage)}
+            onKeyDown={(event) => {
+              if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                setSelectedImage(secondImage);
+              }
+            }}
           />
         )}
 
@@ -74,7 +110,6 @@ function ProjectProfile() {
       {/* Clear the float before the rest of the page content */}
       <div className="clear-both" />
 
-
       {/* Remaining Images */}
       {remainingImages.length > 0 && (
         <div>
@@ -84,11 +119,45 @@ function ProjectProfile() {
               <img
                 key={index}
                 src={url}
-                alt="Additional"
-                className="rounded-md object-cover w-full max-h-[250px]"
+                alt={`${project.title} view ${index + 3}`}
+                className="rounded-md object-cover w-full max-h-[250px] cursor-zoom-in"
+                role="button"
+                tabIndex={0}
+                onClick={() => setSelectedImage(url)}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    setSelectedImage(url);
+                  }
+                }}
               />
             ))}
           </div>
+        </div>
+      )}
+
+      {selectedImage && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black bg-opacity-90 p-4 sm:p-8"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Expanded project image"
+          onClick={() => setSelectedImage(null)}
+        >
+          <button
+            type="button"
+            className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full bg-black bg-opacity-60 text-3xl leading-none text-white hover:bg-opacity-80 focus:outline-none focus:ring-2 focus:ring-white"
+            aria-label="Close expanded image"
+            onClick={() => setSelectedImage(null)}
+          >
+            &times;
+          </button>
+          <img
+            src={selectedImage}
+            alt={`${project.title} expanded view`}
+            className="max-h-[92vh] max-w-[96vw] rounded-lg object-contain shadow-2xl"
+            onClick={(event) => event.stopPropagation()}
+          />
         </div>
       )}
     </div>

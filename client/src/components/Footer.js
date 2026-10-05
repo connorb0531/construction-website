@@ -4,12 +4,7 @@ import React from 'react';
 function Footer() {
   return (
     <footer className="bg-gray-100 text-gray-600 text-sm py-0.5 mt-10 border-t border-gray-200">
-      <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left space-y-0.5 sm:space-y-0">
-
-        {/* Copyright */}
-        <div>
-          © {new Date().getFullYear()} T. Buckley Developments. All rights reserved.
-        </div>
+      <div className="w-full px-4 flex justify-end items-end text-right">
 
         {/* Developer credit */}
         <div>
@@ -18,7 +13,7 @@ function Footer() {
             href="https://github.com/connorb0531"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-500 hover:underline"
+            className="text-gray-600 hover:underline"
           >
             Connor Buckley
           </a>

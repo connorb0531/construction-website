@@ -5,11 +5,16 @@ function HomePage() {
   return (
     <div className="font-sans bg-white text-gray-800  flex flex-col">
       <section className="flex flex-col justify-center items-center text-center px-4 min-h-[65vh]">
-        <h1 className="text-5xl sm:text-6xl font-bold mb-4">
-          Affordable, Reliable, Student-Driven
+        <img
+          src="/img/official_logo.png"
+          alt="T. Buckley Developments hard hat logo"
+          className="w-28 sm:w-36 h-auto mb-5"
+        />
+        <h1 className="text-4xl sm:text-5xl font-bold mb-4">
+          Affordable &amp; Reliable
         </h1>
         <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mb-6">
-          Offering local constructions services based in Boulder, CO.
+          Offering local constructions services.
         </p>
         <div className="grid grid-cols-3 gap-3 sm:flex sm:flex-row sm:space-x-4 sm:gap-0 py-5 w-full max-w-md">
           <Link
@@ -20,7 +25,7 @@ function HomePage() {
           </Link>
           <Link
             to="/projects"
-            className="w-full bg-gray-800 hover:bg-gray-900 text-white px-2 py-2 sm:px-5 sm:py-3 rounded text-xs sm:text-sm text-center"
+            className="brand-button w-full px-2 py-2 sm:px-5 sm:py-3 rounded text-xs sm:text-sm text-center"
           >
             Projects
           </Link>

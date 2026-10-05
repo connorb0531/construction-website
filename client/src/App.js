@@ -7,7 +7,6 @@ import ProjectsPage from "./pages/ProjectsPage";
 import ProjectProfile from "./pages/ProjectProfile";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
-import AdminPage from "./pages/AdminPage";
 import Footer from "./components/Footer";
 
 function App() {
@@ -22,7 +21,6 @@ function App() {
             <Route path="/projects/:id" element={<ProjectProfile />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
-            <Route path="/admin" element={<AdminPage />} />
           </Routes>
         </main>
         <Footer />
